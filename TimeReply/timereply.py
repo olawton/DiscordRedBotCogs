@@ -10,7 +10,7 @@ class TimeReply(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
         self.pdt_calendar = parsedatetime.Calendar()
-        self.config = Config.get_conf(self, identifier=1234567890)
+        self.config = Config.get_conf(self, identifier=7562359640)
         self.config.register_user(timezone=None)
 
     @commands.command()
@@ -41,12 +41,6 @@ class TimeReply(commands.Cog):
         """Clear saved timezone."""
         await self.config.user(ctx.author).timezone.set(None)
         await ctx.send("Your timezone has been cleared.")
-
-    @commands.command()
-    async def timezonetestbad(self, ctx):
-        """Set an invalid string to simulate broken timezone behavior."""
-        await self.config.user(ctx.author).timezone.set("banana/timehole")
-        await ctx.send("Your timezone has been set to an invalid string for testing.")
 
     @commands.Cog.listener()
     async def on_message(self, message):
