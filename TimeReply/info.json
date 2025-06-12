@@ -1,0 +1,10 @@
+{
+    "author": "gigny",
+    "install_msg": "Thanks for installing TimeReply! This cog requires parsedatetime and pytz. Feel free to DM me (@gigny) with questions or suggestions.",
+    "requirements": ["parsedatetime", "pytz"],
+    "description": "Detects times in messages and replies with embeded timestamps",
+    "end_user_data_statement" : "This cog locally stores the Discord IDs of users who set their timezone along with the location that they enter.",
+    "type": "COG",
+    "tags": ["time", "timezones"],
+    "min_bot_version": "3.0.0"
+  }
